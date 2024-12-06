@@ -1,0 +1,10 @@
+<div id="messages">
+  <% @messages.each do |message| %>
+    <div><%= message.content %></div>
+  <% end %>
+</div>
+
+<form data-controller="chat" data-action="submit->chat#sendMessage">
+  <input type="text" data-chat-target="input" placeholder="Type your message..." />
+  <button type="submit">Send</button>
+</form>
